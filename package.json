@@ -1,11 +1,11 @@
 {
-  "name": "CodingPhase-StarterKit",
+  "name": "Dev-StarterKit",
   "version": "1.0.0",
-  "description": "Super Cool Framework",
+  "description": "Great Framework",
   "main": "index.js",
-  "author": "joe santos garcia",
+  "author": "Hector Bernal",
   "license": "MIT",
-  "homepage": "http://rocky.codingphase.com/",
+  "homepage": "http://bernscode.com/",
   "dependencies": {
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
