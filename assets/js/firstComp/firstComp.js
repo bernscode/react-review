@@ -13,9 +13,9 @@ class Layout extends Component {
   }
   render () {
     return (
-      <h1>
-        bernscode
-      </h1>
+      <div>
+        <img src="/img/supreme.png" />
+      </div>
     )
   }
 }

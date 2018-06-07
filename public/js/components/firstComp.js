@@ -46,9 +46,9 @@ var Layout = function (_Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
+        'div',
         null,
-        'bernscode'
+        _react2.default.createElement('img', { src: '/img/supreme.png' })
       );
     }
   }]);
