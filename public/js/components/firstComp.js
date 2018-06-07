@@ -94,7 +94,7 @@ var Layout = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'version-num' },
-              'version 2.0.18'
+              'version 2.0.20'
             ),
             _react2.default.createElement('br', null),
             _react2.default.createElement(
