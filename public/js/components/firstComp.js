@@ -24,6 +24,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+//Component through a Class
+
 var Layout = function (_Component) {
   _inherits(Layout, _Component);
 
@@ -31,10 +33,6 @@ var Layout = function (_Component) {
     _classCallCheck(this, Layout);
 
     var _this = _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).call(this));
-
-    _this.clickedBtn = function () {
-      console.log('swag');
-    };
 
     _this.state = {
       name: 'bern'
@@ -48,13 +46,42 @@ var Layout = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('img', { src: '/img/supreme.png' })
+        _react2.default.createElement(Header, null),
+        _react2.default.createElement('img', { src: '/img/bape.png' })
       );
     }
   }]);
 
   return Layout;
 }(_react.Component);
+
+//Dumb Component
+
+var Header = function Header() {
+  return _react2.default.createElement(
+    'header',
+    null,
+    _react2.default.createElement(
+      'ul',
+      null,
+      _react2.default.createElement(
+        'li',
+        null,
+        'Home'
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        'About'
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        'Contact'
+      )
+    )
+  );
+};
 
 var app = document.getElementById('app');
 

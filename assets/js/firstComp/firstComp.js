@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
+//Component through a Class
+
 class Layout extends Component {
   constructor () {
     super()
@@ -8,18 +10,28 @@ class Layout extends Component {
       name: 'bern'
     }
   }
-  clickedBtn = () => {
-    console.log('swag')
-  }
   render () {
-    return (
-      <div>
-        <img src="/img/supreme.png" />
-      </div>
-    )
+    return (<div>
+        <Header />
+        <img src="/img/bape.png" />
+     </div>)
   }
 }
 
+//Dumb Component
+
+var Header = function () {
+  return (<header>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </header>)
+}
+
+
+
 const app = document.getElementById('app')
 
-ReactDOM.render(<Layout />, app)
+ReactDOM.render(<Layout/>, app)
