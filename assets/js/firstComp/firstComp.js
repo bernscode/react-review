@@ -21,20 +21,50 @@ class Layout extends Component {
     }, function() {
       console.log('Hey I clicked the girl, her health is now ' + this.state.health)
     })
-
   }
 
   render () {
     return (<div id={'parent'}>
-        <div className={`blue-bg ${(this.state.health < 55) ? this.state.lowLevelClass : ''}`}>
-          <h3>Name: {this.state.name}</h3>
-          <h3>Health: {this.state.health}</h3>
-          <h3>Level: {this.state.level}</h3>
-        <img src="/img/bape.png" alt={'girl with bape'} onClick={this.clickedGirl}/>
+      <Header />
+      <div className={`blue-bg ${(this.state.health < 55) ? this.state.lowLevelClass : ''}`}>
+          <div className={'user-info'}>
+            <h3>Name: {this.state.name}</h3>
+            <h3>Health: {this.state.health}</h3>
+            <h3>Level: {this.state.level}</h3>
+          </div>
+          <GirlImage />
         </div>
      </div>)
   }
 }
+
+
+
+
+
+
+
+
+//Component through a Class
+
+class GirlImage extends Component {
+  constructor () {
+    super()
+    this.state = {
+    }
+  }
+  render () {
+    return (<div className="GirlImageComp">
+      <img src="/img/bape.png" alt={'girl with bape'} onClick={this.clickedGirl}/>
+    </div>)
+  }
+}
+
+
+
+
+
+
 
 
 
@@ -57,4 +87,4 @@ var Header = function () {
 
 const app = document.getElementById('app')
 
-ReactDOM.render(<Layout/>, app)
+ReactDOM.render(<Layout />, app)

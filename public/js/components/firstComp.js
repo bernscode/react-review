@@ -59,34 +59,67 @@ var Layout = function (_Component) {
       return _react2.default.createElement(
         'div',
         { id: 'parent' },
+        _react2.default.createElement(Header, null),
         _react2.default.createElement(
           'div',
           { className: 'blue-bg ' + (this.state.health < 55 ? this.state.lowLevelClass : '') },
           _react2.default.createElement(
-            'h3',
-            null,
-            'Name: ',
-            this.state.name
+            'div',
+            { className: 'user-info' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Name: ',
+              this.state.name
+            ),
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Health: ',
+              this.state.health
+            ),
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Level: ',
+              this.state.level
+            )
           ),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'Health: ',
-            this.state.health
-          ),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'Level: ',
-            this.state.level
-          ),
-          _react2.default.createElement('img', { src: '/img/bape.png', alt: 'girl with bape', onClick: this.clickedGirl })
+          _react2.default.createElement(GirlImage, null)
         )
       );
     }
   }]);
 
   return Layout;
+}(_react.Component);
+
+//Component through a Class
+
+var GirlImage = function (_Component2) {
+  _inherits(GirlImage, _Component2);
+
+  function GirlImage() {
+    _classCallCheck(this, GirlImage);
+
+    var _this2 = _possibleConstructorReturn(this, (GirlImage.__proto__ || Object.getPrototypeOf(GirlImage)).call(this));
+
+    _this2.state = {};
+    return _this2;
+  }
+
+  _createClass(GirlImage, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'GirlImageComp' },
+        _react2.default.createElement('img', { src: '/img/bape.png', alt: 'girl with bape', onClick: this.clickedGirl })
+      );
+    }
+  }]);
+
+  return GirlImage;
 }(_react.Component);
 
 //Dumb Component
