@@ -75,17 +75,11 @@ var Layout = function (_Component) {
             _react2.default.createElement(
               'h3',
               null,
-              'Health: ',
-              this.state.health
-            ),
-            _react2.default.createElement(
-              'h3',
-              null,
               'Level: ',
               this.state.level
             )
           ),
-          _react2.default.createElement(GirlImage, null)
+          _react2.default.createElement(GirlImage, { clickedGirl: this.clickedGirl, health: this.state.health })
         )
       );
     }
@@ -104,7 +98,9 @@ var GirlImage = function (_Component2) {
 
     var _this2 = _possibleConstructorReturn(this, (GirlImage.__proto__ || Object.getPrototypeOf(GirlImage)).call(this));
 
-    _this2.state = {};
+    _this2.state = {
+      gameOver: 'GAME OVER!'
+    };
     return _this2;
   }
 
@@ -114,7 +110,13 @@ var GirlImage = function (_Component2) {
       return _react2.default.createElement(
         'div',
         { className: 'GirlImageComp' },
-        _react2.default.createElement('img', { src: '/img/bape.png', alt: 'girl with bape', onClick: this.clickedGirl })
+        _react2.default.createElement('img', { src: '/img/bape.png', alt: 'girl with bape', onClick: this.props.clickedGirl }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Health: ',
+          this.props.health <= 0 ? this.state.gameOver : this.props.health
+        )
       );
     }
   }]);
